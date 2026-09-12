@@ -1,182 +1,181 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Setting Web — Studio de Création Web</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Setting Web | Agence Web Moderne & Sur-Mesure</title>
+  
+  <!-- Font Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- EN-TÊTE ET NAVIGATION -->
+  <!-- Curseur personnalisé immersif -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- NAVIGATION -->
   <header>
     <div class="logo">Setting<span>Web</span></div>
     <nav class="nav-links">
       <a href="#resultats">Réalisations</a>
       <a href="#tarifs">Tarifs</a>
-      <a href="#avis">Avis</a>
       <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-btn">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <!-- SECTION HERO -->
-    <section class="hero">
-      <div class="badge-hero">Offre de Lancement</div>
-      <h1>Votre présence en ligne, <span class="text-gradient">recalculée pour l'impact.</span></h1>
-      <p>Setting Web conçoit des sites web haute performance en blanc, bleu et violet, optimisés pour convertir vos visiteurs en clients.</p>
-      <div class="hero-actions">
-        <a href="#tarifs" class="btn-primary">Commander mon site — 100 €</a>
-        <a href="#resultats" class="btn-secondary">Explorer les réalisations</a>
-      </div>
-    </section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="badge-hero float-anim">⚡ Site Web Sur-Mesure dès 100€</div>
+    <h1 class="reveal-text">Des sites web <span class="text-gradient">captivants</span> & sur-mesure pour votre entreprise.</h1>
+    <p class="reveal-text">Nous créons des expériences en ligne modernes, fluides et conçues pour convertir vos visiteurs en clients fidèles.</p>
+    <div class="hero-actions reveal-text">
+      <a href="#contact" class="btn-primary magnetic-btn">Obtenir mon site</a>
+      <a href="#resultats" class="btn-secondary magnetic-btn">Voir nos projets</a>
+    </div>
+  </section>
 
-    <!-- SECTION RÉALISATIONS -->
-    <section id="resultats" class="container">
-      <h2 class="section-title">Nos <span class="text-gradient">Réalisations</span></h2>
-      <p class="section-subtitle">Exemples de structures d'interfaces développées pour nos clients.</p>
-      
-      <div class="grid-resultats">
-        <div class="card">
-          <div class="card-img bg-blue">
-            <span class="card-tag">E-Commerce</span>
-          </div>
-          <div class="card-body">
-            <h3>Boutique de Mode</h3>
-            <p>Architecture de vente complète avec intégration de paiement et catalogue réactif.</p>
-            <button class="btn-demo" onclick="voirDemo('Boutique de Mode')">Consulter la démonstration &rarr;</button>
-          </div>
+  <!-- RÉSULTATS / PROJETS -->
+  <section id="resultats" class="container">
+    <h2 class="section-title reveal-text">Nos Dernières Créations</h2>
+    <p class="section-subtitle reveal-text">Des designs épurés adaptés à chaque secteur d'activité.</p>
+
+    <div class="grid-resultats">
+      <!-- Carte 1 -->
+      <div class="card tilt-card">
+        <div class="card-img bg-blue">
+          <span class="card-tag">Restauration</span>
         </div>
-
-        <div class="card">
-          <div class="card-img bg-purple">
-            <span class="card-tag">Site Vitrine</span>
-          </div>
-          <div class="card-body">
-            <h3>Artisan & Services</h3>
-            <p>Présentation structurée de vos prestations et module de demande de devis.</p>
-            <button class="btn-demo" onclick="voirDemo('Site Artisan')">Consulter la démonstration &rarr;</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img bg-gradient">
-            <span class="card-tag">Portfolio</span>
-          </div>
-          <div class="card-body">
-            <h3>Créatif & Freelance</h3>
-            <p>Mise en valeur de vos projets à travers une interface fluide et minimale.</p>
-            <button class="btn-demo" onclick="voirDemo('Portfolio')">Consulter la démonstration &rarr;</button>
-          </div>
+        <div class="card-body">
+          <h3>Bistro & Gastronomie</h3>
+          <p>Site vitrine interactif avec menu en ligne et réservation directe.</p>
+          <button class="btn-demo">Découvrir le projet →</button>
         </div>
       </div>
-    </section>
 
-    <!-- SECTION TARIFS -->
-    <section id="tarifs" class="container">
-      <h2 class="section-title">Offre <span class="text-gradient">Démarrage</span></h2>
-      
-      <div class="pricing-wrapper">
-        <div class="price-card">
-          <div class="badge-populaire">Tarif de Lancement</div>
-          <h3>Pack Starter</h3>
-          <div class="price-container">
-            <span class="price">100</span>
-            <span class="currency">€</span>
-          </div>
-          <p class="price-note">Prix de commencement — évolutif selon la complexité du cahier des charges.</p>
-          
-          <ul class="features">
-            <li><span class="check-icon">✓</span> Design adaptatif PC, Tablette & Smartphone</li>
-            <li><span class="check-icon">✓</span> Jusqu'à 3 pages personnalisées</li>
-            <li><span class="check-icon">✓</span> Formulaire de contact fonctionnel</li>
-            <li><span class="check-icon">✓</span> Direction artistique Blanc, Bleu & Violet</li>
-            <li><span class="check-icon">✓</span> Optimisation des performances et SEO de base</li>
-          </ul>
-
-          <a href="#contact" class="btn-primary full-width">Initier votre projet</a>
+      <!-- Carte 2 -->
+      <div class="card tilt-card">
+        <div class="card-img bg-purple">
+          <span class="card-tag">Artisanat</span>
+        </div>
+        <div class="card-body">
+          <h3>Ebenisterie d'Art</h3>
+          <p>Mise en valeur des créations avec galerie haute définition et demandes de devis.</p>
+          <button class="btn-demo">Découvrir le projet →</button>
         </div>
       </div>
-    </section>
 
-    <!-- SECTION AVIS CLIENTS -->
-    <section id="avis" class="container">
-      <h2 class="section-title">Avis <span class="text-gradient">Clients</span></h2>
-      <p class="section-subtitle">Évaluations vérifiées de nos prestations.</p>
-
-      <div class="trustpilot-placeholder">
-        <div class="trustpilot-logo">Trustpilot</div>
-        <p class="trustpilot-text">Le module d'évaluation automatique sera actif dès les premières livraisons.</p>
-      </div>
-    </section>
-
-    <!-- SECTION FAQ -->
-    <section id="faq" class="container">
-      <h2 class="section-title">Foire Aux <span class="text-gradient">Questions</span></h2>
-      <p class="section-subtitle">Réponses aux interrogations fréquentes sur le processus de création.</p>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">Quel est le délai moyen de livraison ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Le délai moyen est de 3 à 7 jours ouvrés à compter de la réception de l'ensemble de vos éléments (textes, images, chartes graphiques).</p>
-          </div>
+      <!-- Carte 3 -->
+      <div class="card tilt-card">
+        <div class="card-img bg-gradient">
+          <span class="card-tag">Services</span>
         </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Que couvre le tarif initial de 100 € ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Il comprend le développement de l'interface (jusqu'à 3 pages), le design responsive, le formulaire de contact opérationnel et l'optimisation technique de base.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Suis-je propriétaire de la structure du site ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Oui. L'intégralité du code, des contenus et des droits d'utilisation vous est transférée dès la finalisation de la commande.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Le site est-il optimisé pour les terminaux mobiles ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Toutes nos interfaces sont conçues selon les principes du Responsive Design pour garantir une lisibilité parfaite sur tout type d'écran.</p>
-          </div>
+        <div class="card-body">
+          <h3>Cabinet de Conseil</h3>
+          <p>Présentation professionnelle avec prise de rendez-vous intégrée.</p>
+          <button class="btn-demo">Découvrir le projet →</button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION CONTACT -->
-    <section id="contact" class="container">
-      <div class="contact-box">
-        <h2 class="section-title">Transmettre votre <span class="text-gradient">Cahier des Charges</span></h2>
-        <p class="section-subtitle">Complétez le formulaire ci-dessous pour recevoir une proposition sous 24 heures.</p>
+  <!-- TARIFS -->
+  <section id="tarifs" class="container">
+    <h2 class="section-title reveal-text">Un Tarif Transparent</h2>
+    <p class="section-subtitle reveal-text">Pas de frais cachés, un accompagnement complet.</p>
+
+    <div class="pricing-wrapper">
+      <div class="price-card tilt-card">
+        <div class="badge-populaire">Offre Essentielle</div>
+        <div class="price-container">
+          <span class="price">100</span>
+          <span class="currency">€</span>
+        </div>
+        <p class="price-note">Paiement unique, aucun abonnement requis</p>
         
-        <form id="contactForm" action="https://formspree.io/f/votre_email_formspree" method="POST">
-          <div class="form-group">
-            <input type="text" name="nom" id="nom" placeholder="Nom et prénom ou entreprise" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" id="email" placeholder="Adresse e-mail professionnelle" required>
-          </div>
-          <div class="form-group">
-            <textarea name="message" id="message" rows="5" placeholder="Description de vos objectifs web..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary full-width">Envoyer la demande</button>
-        </form>
-        <div id="formFeedback" class="feedback-msg"></div>
+        <ul class="features">
+          <li><span class="check-icon">✓</span> Design sur-mesure & 100% responsive</li>
+          <li><span class="check-icon">✓</span> Optimisation de la vitesse de chargement</li>
+          <li><span class="check-icon">✓</span> Formulaire de contact fonctionnel</li>
+          <li><span class="check-icon">✓</span> Hébergement rapide & sécurisé inclus</li>
+        </ul>
+
+        <a href="#contact" class="btn-primary full-width magnetic-btn">Commander mon site</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- TRUSTPILOT PLACEHOLDER -->
+  <section class="container">
+    <div class="trustpilot-placeholder tilt-card">
+      <div class="trustpilot-logo">★ Trustpilot</div>
+      <p class="trustpilot-text">"Une note moyenne de 4.9/5 basée sur la satisfaction de nos premiers clients."</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="container">
+    <h2 class="section-title reveal-text">Foire Aux Questions</h2>
+    <p class="section-subtitle reveal-text">Tout ce que vous devez savoir avant de vous lancer.</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Combien de temps prend la création du site ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Une fois les textes et images transmis, votre site est livré et mis en ligne en 3 à 5 jours ouvrés.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Suis-je propriétaire de mon site web ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Absolument ! Le code vous appartient entièrement et il n'y a aucun abonnement mensuel obligatoire.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Le site sera-t-il bien adapté sur smartphone ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Oui, toutes nos créations sont pensées « Mobile First » pour garantir une fluidité parfaite sur téléphones et tablettes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <div class="contact-box tilt-card">
+      <h2 class="section-title">Discutons de Votre Projet</h2>
+      <p class="section-subtitle">Remplissez le formulaire ci-dessous, nous répondons sous 24h.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/xbldbeoo" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Votre Nom / Entreprise" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Votre Adresse E-mail" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width magnetic-btn">Envoyer mon message</button>
+        <p class="feedback-msg" id="form-status"></p>
+      </form>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Setting Web. Tous droits réservés.</p>
+    <p>© 2026 Setting Web. Tous droits réservés.</p>
   </footer>
 
+  <!-- Scripts d'animation GSAP + JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
