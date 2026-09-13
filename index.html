@@ -3,128 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Setting Web — Création de Sites Vitrines pour Commerce & Restaurant</title>
-  <meta name="description" content="Création de sites vitrines professionnels pour commerçants, restaurants et professionnels locaux. Sans abonnement.">
+  <title>Setting Web — Studio de Création Web</title>
   <link rel="stylesheet" href="style.css">
-  
-  <!-- GSAP & ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <!-- Lenis Smooth Scroll -->
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Curseur Personnalisé -->
-  <div class="custom-cursor"></div>
-
-  <!-- En-tête / Navigation -->
-  <header class="navbar">
-    <div class="logo">SETTING WEB</div>
-    <nav>
-      <a href="#services">Prestations</a>
-      <a href="#tarifs" class="nav-btn">Offre Spéciale</a>
+  <!-- EN-TÊTE ET NAVIGATION -->
+  <header>
+    <div class="logo">Setting<span>Web</span></div>
+    <nav class="nav-links">
+      <a href="#resultats">Réalisations</a>
+      <a href="#tarifs">Offre Flash</a>
+      <a href="#avis">Avis</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-btn">Lancer mon projet</a>
     </nav>
   </header>
 
-  <!-- Section Héro -->
-  <section class="hero container">
-    <div class="hero-content">
-      <span class="tagline">Création de sites vitrines</span>
-      <h1 class="hero-title reveal-text">Un site web moderne pour votre établissement. Sans aucun abonnement.</h1>
-      <p class="hero-description reveal-text">
-        Nous créons votre site vitrine sur-mesure pour présenter votre activité, vos tarifs, votre menu et vos coordonnées. Une visibilité claire sur internet sans frais mensuels récurrents.
-      </p>
+  <main>
+    <!-- SECTION HERO -->
+    <section class="hero">
+      <div class="badge-hero">Offre de Lancement Limitée</div>
+      <h1>Votre site vitrine professionnel, <span class="text-gradient">clef en main.</span></h1>
+      <p>Setting Web conçoit des sites vitrines haute performance pour artisans, restaurants et indépendants, optimisés pour convertir vos visiteurs en clients.</p>
       <div class="hero-actions">
-        <a href="#tarifs" class="btn-primary magnetic-btn">Découvrir l'offre</a>
-        <a href="#services" class="btn-secondary">En savoir plus</a>
+        <a href="https://buy.stripe.com/6oU6oJaod0COg13d1B73G00" target="_blank" class="btn-primary">Commander mon site — 200 €</a>
+        <a href="#resultats" class="btn-secondary">Voir les modèles</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Section Prestations -->
-  <section id="services" class="container">
-    <h2 class="section-title reveal-text">Ce que contient votre site vitrine</h2>
-    <p class="section-subtitle reveal-text">Tout le nécessaire pour présenter votre commerce à vos clients.</p>
-
-    <div class="services-grid">
-      <div class="service-card tilt-card">
-        <h3>Présentation & Menu</h3>
-        <p>Affichage clair de vos prestations, horaires, photos de votre établissement et carte/menu complet.</p>
-      </div>
-      <div class="service-card tilt-card">
-        <h3>Contact & Accès</h3>
-        <p>Bouton d'appel direct, formulaire de contact et plan d'accès pour que vos clients vous trouvent facilement.</p>
-      </div>
-      <div class="service-card tilt-card">
-        <h3>Zéro Frais Mensuels</h3>
-        <p>Un paiement unique à la commande. Vous ne payez aucun abonnement mensuel d'hébergement.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Tarifs & Urgence -->
-  <section id="tarifs" class="container">
-    <h2 class="section-title reveal-text">Offre de Lancement Exclusivité</h2>
-    <p class="section-subtitle reveal-text">Tarif préférentiel réservé aux 2 prochains projets.</p>
-
-    <div class="pricing-wrapper">
-      <div class="price-card tilt-card promo-card">
-        <div class="badge-limite">Disponible : 2 places restantes</div>
-        
-        <div class="price-container">
-          <span class="old-price">600€</span>
-          <span class="price">200</span>
-          <span class="currency">€</span>
+    <!-- SECTION RÉALISATIONS -->
+    <section id="resultats" class="container">
+      <h2 class="section-title">Nos <span class="text-gradient">Réalisations & Exemples</span></h2>
+      <p class="section-subtitle">Exemples de sites optimisés pour les professionnels.</p>
+      
+      <div class="grid-resultats">
+        <div class="card">
+          <div class="card-img bg-blue">
+            <span class="card-tag">Restauration</span>
+          </div>
+          <div class="card-body">
+            <h3>Le Bistro Gourmet</h3>
+            <p>Présentation du menu, horaires d'ouverture et intégration d'un module de réservation rapide.</p>
+            <button class="btn-demo" onclick="voirDemo('Le Bistro Gourmet')">Voir le modèle &rarr;</button>
+          </div>
         </div>
 
-        <div class="countdown-box">
-          <p class="countdown-label">Fin de la session de lancement dans :</p>
-          <div id="countdown" class="countdown-timer">07j 00h 00m 00s</div>
+        <div class="card">
+          <div class="card-img bg-purple">
+            <span class="card-tag">Artisan & Services</span>
+          </div>
+          <div class="card-body">
+            <h3>Salon de Coiffure & Beauté</h3>
+            <p>Mise en avant des prestations, tarifs et système d'agenda en ligne automatisé.</p>
+            <button class="btn-demo" onclick="voirDemo('Salon de Coiffure')">Voir le modèle &rarr;</button>
+          </div>
         </div>
 
-        <p class="price-note">Paiement unique sécurisé. Aucun coût d'abonnement récurrent.</p>
-        
-        <ul class="features">
-          <li><span class="check-icon">—</span> Création de votre site vitrine complet</li>
-          <li><span class="check-icon">—</span> Intégration de vos photos, menus ou tarifs</li>
-          <li><span class="check-icon">—</span> Formulaire de contact et bouton d'appel direct</li>
-          <li><span class="check-icon">—</span> Intégration possible de votre calendrier (Calendly)</li>
-          <li><span class="check-icon">—</span> Affichage optimisé sur téléphone, tablette et ordinateur</li>
-          <li><span class="check-icon">—</span> Accès immédiat au formulaire de personnalisation après paiement</li>
-        </ul>
-
-        <!-- Remplace l'URL ci-dessous par ton lien Stripe exact -->
-        <a href="https://buy.stripe.com/TON_LIEN_STRIPE" target="_blank" class="btn-primary full-width magnetic-btn">Réserver mon site à 200€</a>
+        <div class="card">
+          <div class="card-img bg-gradient">
+            <span class="card-tag">Indépendant</span>
+          </div>
+          <div class="card-body">
+            <h3>Consultant & Coach</h3>
+            <p>Site vitrine minimaliste avec intégration de module Calendly pour prise de rdv en direct.</p>
+            <button class="btn-demo" onclick="voirDemo('Consultant')">Voir le modèle &rarr;</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pied de page -->
+    <!-- SECTION TARIFS AVEC URGENCE -->
+    <section id="tarifs" class="container">
+      <h2 class="section-title">Offre <span class="text-gradient">Lancement Express</span></h2>
+      <p class="section-subtitle">Un tarif unique sans abonnement caché pour lancer votre commerce en ligne.</p>
+
+      <div class="pricing-wrapper">
+        <div class="price-card">
+          <div class="badge-populaire">Places Limitées</div>
+          <h3>Pack Vitrine Pro</h3>
+          
+          <div class="price-container">
+            <span class="price">200</span>
+            <span class="currency">€</span>
+          </div>
+          <p class="price-note">Paiement unique — 0 €/mois d'abonnement</p>
+          
+          <div class="countdown-box">
+            <div class="countdown-label">Fin de l'offre spéciale dans :</div>
+            <div id="timer" class="countdown-timer">04h 32m 15s</div>
+          </div>
+
+          <ul class="features">
+            <li><span class="check-icon">✓</span> Design modernisé Blanc, Bleu & Violet</li>
+            <li><span class="check-icon">✓</span> Adaptation mobile & tablette parfaite</li>
+            <li><span class="check-icon">✓</span> Formulaire de contact direct ou réservation</li>
+            <li><span class="check-icon">✓</span> Module Calendly inclus (sur demande)</li>
+            <li><span class="check-icon">✓</span> Propriété totale de votre code & domaine</li>
+          </ul>
+
+          <a href="https://buy.stripe.com/6oU6oJaod0COg13d1B73G00" target="_blank" class="btn-primary full-width">Valider & Payer par Stripe (200€)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION AVIS CLIENTS -->
+    <section id="avis" class="container">
+      <h2 class="section-title">Avis <span class="text-gradient">Clients</span></h2>
+      <p class="section-subtitle">Ce que pensent les commerçants ayant adopté nos solutions.</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>"Site vitrine livré en quelques jours pour mon bistro. Très propre, élégant et mes clients consultent la carte facilement sur leur téléphone."</p>
+          <div class="testimonial-author">Marc D.</div>
+          <div class="testimonial-role">Gérant — Le Bistro Gourmet</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>"L'intégration de la prise de rendez-vous Calendly a tout changé. Plus besoin de répondre au téléphone pendant les prestations."</p>
+          <div class="testimonial-author">Sophie L.</div>
+          <div class="testimonial-role">Coiffeuse Indépendante</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section id="faq" class="container">
+      <h2 class="section-title">Foire Aux <span class="text-gradient">Questions</span></h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Comment fonctionne le paiement de 200 € ? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Le paiement s'effectue de manière sécurisée via Stripe. Une fois validé, vous remplissez le formulaire ci-dessous pour nous envoyer vos contenus et nous lançons le développement.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Puis-je intégrer un calendrier de réservation (Calendly) ? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Oui, nous configurons le module Calendly sans frais supplémentaires sur votre site pour que vos clients puissent réserver des créneaux en direct.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION FORMULAIRE / CAHIER DES CHARGES -->
+    <section id="contact" class="container">
+      <div class="contact-box">
+        <h2 class="section-title">Envoyez vos <span class="text-gradient">Informations</span></h2>
+        <p class="section-subtitle">Remplissez ce formulaire avant ou juste après votre règlement Stripe.</p>
+        
+        <!-- Remplace le lien Formspree ci-dessous avec ton propre ID Formspree lié à kais_hamidona@icloud.com -->
+        <form id="contactForm" action="https://formspree.io/f/votre_form_id" method="POST">
+          <div class="form-group">
+            <input type="text" name="nom" id="nom" placeholder="Nom complet ou Nom du commerce" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Adresse e-mail de contact" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" rows="5" placeholder="Présentez votre activité, vos souhaits de couleurs et si vous désirez Calendly..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Envoyer mes éléments</button>
+        </form>
+        <div id="formFeedback" class="feedback-msg"></div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <div class="container footer-content">
-      <p>&copy; Setting Web. Tous droits réservés. Création de sites vitrines professionnels.</p>
-    </div>
+    <p>&copy; 2026 Setting Web. Tous droits réservés.</p>
   </footer>
-<!-- SECTION AVIS CLIENTS -->
-<section class="container">
-  <h2 class="section-title">Ce que disent nos clients</h2>
-  <p class="section-subtitle">Des commerçants et indépendants qui nous font confiance.</p>
 
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <p>"Site vitrine livré en 4 jours pour mon restaurant. Très propre, facile d'accès et surtout sans aucun abonnement à payer."</p>
-      <div class="testimonial-author">Laurent M.</div>
-      <div class="testimonial-role">Restaurateur à Lille</div>
-    </div>
-
-    <div class="testimonial-card">
-      <p>"L'intégration de la prise de rendez-vous a simplifié mon quotidien. Mes clients réservent directement en ligne."</p>
-      <div class="testimonial-author">Sophie T.</div>
-      <div class="testimonial-role">Salon de coiffure</div>
-    </div>
-  </div>
-</section>
+  <script src="script.js"></script>
 </body>
 </html>
