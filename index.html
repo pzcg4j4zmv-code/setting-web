@@ -1,130 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Création de Sites Vitrines Sur-Mesure</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSetting — Création de sites web</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ENTÊTE -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">WebCraft</h1>
-            <p class="tagline">Votre site vitrine professionnel livré rapidement</p>
+  <!-- EN-TÊTE -->
+  <header>
+    <div class="logo">Web<span>Setting</span></div>
+    <nav class="nav-links">
+      <a href="#resultats">Réalisations</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
+      <a href="#commande" class="nav-btn">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECTION HERO AVEC URGENCE -->
+    <section class="hero">
+      <div class="badge-hero urgency-badge">ATTENTION : Limité à 2 créations par jour</div>
+      <h1>Votre site vitrine livré sous <span class="text-gradient">24 à 48 heures.</span></h1>
+      <p>WebSetting conçoit votre présence en ligne avec un design percutant. Afin de garantir nos délais de livraison très courts, nous n'acceptons que deux clients par jour.</p>
+      <div class="hero-actions">
+        <a href="#commande" class="btn-primary">Remplir le cahier des charges (200 €)</a>
+        <a href="#resultats" class="btn-secondary">Voir les modèles</a>
+      </div>
+    </section>
+
+    <!-- SECTION RÉALISATIONS -->
+    <section id="resultats" class="container">
+      <h2 class="section-title">Modèles <span class="text-gradient">Disponibles</span></h2>
+      <p class="section-subtitle">Trois structures optimisées pour votre secteur d'activité.</p>
+      
+      <div class="grid-resultats">
+        <div class="card">
+          <div class="card-body">
+            <h3>Site Vitrine Classique</h3>
+            <p>Idéal pour présenter une entreprise, ses services et permettre la prise de contact simple et directe.</p>
+            <button class="btn-demo" onclick="voirDemo('Site Vitrine')">Consulter la structure &rarr;</button>
+          </div>
         </div>
-    </header>
 
-    <!-- SECTION OFFRES -->
-    <section class="offres">
-        <div class="container">
-            <h2>Choisissez votre formule de site vitrine</h2>
-            <div class="cards-grid">
-                
-                <!-- CARTE 1 -->
-                <div class="card">
-                    <h3>Gourmet & Bistrot</h3>
-                    <p class="card-subtitle">Idéal pour restaurants, cafés et métiers de la bouche</p>
-                    <ul>
-                        <li>Présentation du menu / de la carte</li>
-                        <li>Formulaire de réservation de table</li>
-                        <li>Horaires et plan de localisation</li>
-                        <li>Galerie photos de vos plats</li>
-                    </ul>
-                </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Gourmet & Bistrot</h3>
+            <p>Mise en valeur de votre établissement, de votre carte et de l'ambiance de votre restaurant.</p>
+            <button class="btn-demo" onclick="voirDemo('Gourmet Bistrot')">Consulter la structure &rarr;</button>
+          </div>
+        </div>
 
-                <!-- CARTE 2 -->
-                <div class="card highlight">
-                    <span class="badge">Populaire</span>
-                    <h3>Freelance & Indépendant</h3>
-                    <p class="card-subtitle">Pour consultants, coachs et prestataires de services</p>
-                    <ul>
-                        <li>Présentation de vos prestations</li>
-                        <li>Section "À propos" et votre parcours</li>
-                        <li>Formulaire de contact direct</li>
-                        <li>Intégration de vos réseaux sociaux</li>
-                    </ul>
-                </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Freelance & Coach</h3>
+            <p>Conçu pour les coiffeurs, coachs et freelances en solo souhaitant mettre en avant leurs prestations.</p>
+            <button class="btn-demo" onclick="voirDemo('Freelance Coach')">Consulter la structure &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <!-- CARTE 3 -->
-                <div class="card">
-                    <h3>Niche & Métiers Spécifiques</h3>
-                    <p class="card-subtitle">Artisans, créateurs, santé, bien-être ou projet unique</p>
-                    <ul>
-                        <li>Mise en valeur de votre expertise</li>
-                        <li>Galerie réalisations / portfolio</li>
-                        <li>Module de demande de devis</li>
-                        <li>Structure adaptée à votre activité</li>
-                    </ul>
-                </div>
+    <!-- SECTION TARIFS (STYLE DE L'IMAGE) -->
+    <section id="tarifs" class="container">
+      <h2 class="section-title">Offre <span class="text-gradient">Démarrage</span></h2>
+      
+      <div class="pricing-wrapper">
+        <div class="price-card">
+          <div class="badge-populaire">TARIF DE LANCEMENT</div>
+          <h3>Création Complète</h3>
+          <div class="price-container">
+            <span class="price">200</span>
+            <span class="currency">€</span>
+          </div>
+          <p class="price-note">Paiement unique, site livré clé en main sous 24h à 48h.</p>
+          
+          <ul class="features">
+            <li><span class="check-icon">✓</span> Design structuré et professionnel</li>
+            <li><span class="check-icon">✓</span> Intégration de vos textes et images</li>
+            <li><span class="check-icon">✓</span> Formulaire de contact fonctionnel</li>
+            <li><span class="check-icon">✓</span> Mise en ligne ultra-rapide</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- SECTION FAQ -->
+    <section id="faq" class="container">
+      <h2 class="section-title">Foire Aux <span class="text-gradient">Questions</span></h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Pourquoi limitez-vous à 2 projets par jour ? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>C'est la seule façon de garantir une livraison extrêmement rapide (24 à 48 heures) sans compromettre la qualité du design et de l'intégration.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Que se passe-t-il après le paiement ? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Une fois le formulaire validé et le paiement effectué, nous recevons vos informations. Le développement commence immédiatement et vous recevez votre site dans les 48 heures.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION COMMANDE -->
+    <section id="commande" class="container">
+      <div class="contact-box">
+        <h2 class="section-title">Démarrer la <span class="text-gradient">Création</span></h2>
+        <p class="section-subtitle urgency-text">Remplissez vos critères. Vous serez redirigé vers l'interface de paiement sécurisée.</p>
+        
+        <!-- INSCRIS-TOI SUR FORMSPREE.IO AVEC TON EMAIL APPLE ET REMPLACE "VOTRE_ID_FORMSPREE" PAR LE CODE QU'ILS TE DONNERONT -->
+        <form id="contactForm" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+          <div class="form-group-row">
+            <div class="form-group">
+              <input type="text" name="nom" placeholder="Nom" required>
             </div>
-        </div>
+            <div class="form-group">
+              <input type="text" name="prenom" placeholder="Prénom" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Adresse e-mail" required>
+          </div>
+          <div class="form-group">
+            <textarea name="projet" rows="3" placeholder="Décrivez votre activité (Restaurant, Coach, Artisan...)" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" name="couleurs" placeholder="Couleurs souhaitées (ex: Blanc, Bleu, Noir...)" required>
+          </div>
+          <div class="form-group">
+            <textarea name="images_info" rows="2" placeholder="Quelles images souhaitez-vous mettre en avant ? (Lien vers un dossier ou description)"></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Valider et procéder au paiement — 200 €</button>
+        </form>
+        <div id="formFeedback" class="feedback-msg"></div>
+      </div>
     </section>
+  </main>
 
-    <!-- SECTION FORMULAIRE DE COMMANDES -->
-    <section class="commande" id="commander">
-        <div class="container">
-            <h2>Formulaire de projet & Commande</h2>
-            <p class="form-intro">Remplissez ces informations pour nous préciser vos besoins avant de finaliser la commande.</p>
+  <footer>
+    <p>&copy; 2026 WebSetting. Tous droits réservés.</p>
+  </footer>
 
-            <form class="order-form">
-                
-                <!-- 1. TYPE DE SITE -->
-                <div class="form-group">
-                    <label for="type-site">1. Quel type de site vitrine souhaitez-vous ? *</label>
-                    <select id="type-site" required>
-                        <option value="">-- Sélectionnez une formule --</option>
-                        <option value="gourmet">Vitrine Gourmet & Bistrot</option>
-                        <option value="freelance">Vitrine Freelance & Indépendant</option>
-                        <option value="niche">Vitrine Niche / Métier Spécifique</option>
-                    </select>
-                </div>
-
-                <!-- 2. COORDONNÉES -->
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="nom">Nom & Prénom *</label>
-                        <input type="text" id="nom" placeholder="Ex: Jean Dupont" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Adresse e-mail *</label>
-                        <input type="email" id="email" placeholder="nom@exemple.fr" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="telephone">Téléphone *</label>
-                        <input type="tel" id="telephone" placeholder="06 12 34 56 78" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="entreprise">Nom de votre entreprise / activité *</label>
-                        <input type="text" id="entreprise" placeholder="Ex: Restaurant Le Bistrot" required>
-                    </div>
-                </div>
-
-                <!-- 3. DÉTAILS DU PROJET -->
-                <div class="form-group">
-                    <label for="description">2. Décrivez votre activité et vos attentes pour le site *</label>
-                    <textarea id="description" rows="4" placeholder="Présentez brièvement ce que vous faites, les couleurs souhaitées, l'ambiance..." required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="images-url">3. Lien vers vos images / logos (Google Drive, Dropbox, Wetransfer...)</label>
-                    <input type="url" id="images-url" placeholder="https://drive.google.com/...">
-                    <small>Vous pourrez aussi nous envoyer vos éléments par mail après la commande.</small>
-                </div>
-
-                <!-- PAIEMENT -->
-                <div class="form-submit">
-                    <button type="submit" class="btn-pay">Valider les informations et Payer</button>
-                </div>
-
-            </form>
-        </div>
-    </section>
-
+  <script src="script.js"></script>
 </body>
 </html>
