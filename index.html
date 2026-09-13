@@ -1,206 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Setting Web — Studio de Création Web</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de Sites Vitrines Sur-Mesure</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- EN-TÊTE ET NAVIGATION -->
-  <header>
-    <div class="logo">Setting<span>Web</span></div>
-    <nav class="nav-links">
-      <a href="#resultats">Réalisations</a>
-      <a href="#tarifs">Offre Flash</a>
-      <a href="#avis">Avis</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="nav-btn">Lancer mon projet</a>
-    </nav>
-  </header>
+    <!-- ENTÊTE -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">WebCraft</h1>
+            <p class="tagline">Votre site vitrine professionnel livré rapidement</p>
+        </div>
+    </header>
 
-  <main>
-    <!-- SECTION HERO -->
-    <section class="hero">
-      <div class="badge-hero">Offre de Lancement Limitée</div>
-      <h1>Votre site vitrine professionnel, <span class="text-gradient">clef en main.</span></h1>
-      <p>Setting Web conçoit des sites vitrines haute performance pour artisans, restaurants et indépendants, optimisés pour convertir vos visiteurs en clients.</p>
-      <div class="hero-actions">
-        <a href="https://buy.stripe.com/6oU6oJaod0COg13d1B73G00" target="_blank" class="btn-primary">Commander mon site — 200 €</a>
-        <a href="#resultats" class="btn-secondary">Voir les modèles</a>
-      </div>
+    <!-- SECTION OFFRES -->
+    <section class="offres">
+        <div class="container">
+            <h2>Choisissez votre formule de site vitrine</h2>
+            <div class="cards-grid">
+                
+                <!-- CARTE 1 -->
+                <div class="card">
+                    <h3>Gourmet & Bistrot</h3>
+                    <p class="card-subtitle">Idéal pour restaurants, cafés et métiers de la bouche</p>
+                    <ul>
+                        <li>Présentation du menu / de la carte</li>
+                        <li>Formulaire de réservation de table</li>
+                        <li>Horaires et plan de localisation</li>
+                        <li>Galerie photos de vos plats</li>
+                    </ul>
+                </div>
+
+                <!-- CARTE 2 -->
+                <div class="card highlight">
+                    <span class="badge">Populaire</span>
+                    <h3>Freelance & Indépendant</h3>
+                    <p class="card-subtitle">Pour consultants, coachs et prestataires de services</p>
+                    <ul>
+                        <li>Présentation de vos prestations</li>
+                        <li>Section "À propos" et votre parcours</li>
+                        <li>Formulaire de contact direct</li>
+                        <li>Intégration de vos réseaux sociaux</li>
+                    </ul>
+                </div>
+
+                <!-- CARTE 3 -->
+                <div class="card">
+                    <h3>Niche & Métiers Spécifiques</h3>
+                    <p class="card-subtitle">Artisans, créateurs, santé, bien-être ou projet unique</p>
+                    <ul>
+                        <li>Mise en valeur de votre expertise</li>
+                        <li>Galerie réalisations / portfolio</li>
+                        <li>Module de demande de devis</li>
+                        <li>Structure adaptée à votre activité</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <!-- SECTION RÉALISATIONS -->
-    <section id="resultats" class="container">
-      <h2 class="section-title">Nos <span class="text-gradient">Réalisations & Exemples</span></h2>
-      <p class="section-subtitle">Exemples de sites optimisés pour les professionnels.</p>
-      
-      <div class="grid-resultats">
-        <div class="card">
-          <div class="card-img bg-blue">
-            <span class="card-tag">Restauration</span>
-          </div>
-          <div class="card-body">
-            <h3>Le Bistro Gourmet</h3>
-            <p>Présentation du menu, horaires d'ouverture et intégration d'un module de réservation rapide.</p>
-            <button class="btn-demo" onclick="voirDemo('Le Bistro Gourmet')">Consulter la démonstration &rarr;</button>
-          </div>
-        </div>
+    <!-- SECTION FORMULAIRE DE COMMANDES -->
+    <section class="commande" id="commander">
+        <div class="container">
+            <h2>Formulaire de projet & Commande</h2>
+            <p class="form-intro">Remplissez ces informations pour nous préciser vos besoins avant de finaliser la commande.</p>
 
-        <div class="card">
-          <div class="card-img bg-purple">
-            <span class="card-tag">Artisan & Services</span>
-          </div>
-          <div class="card-body">
-            <h3>Salon de Coiffure & Beauté</h3>
-            <p>Mise en avant des prestations, tarifs et système d'agenda en ligne automatisé.</p>
-            <button class="btn-demo" onclick="voirDemo('Salon de Coiffure')">Consulter la démonstration &rarr;</button>
-          </div>
-        </div>
+            <form class="order-form">
+                
+                <!-- 1. TYPE DE SITE -->
+                <div class="form-group">
+                    <label for="type-site">1. Quel type de site vitrine souhaitez-vous ? *</label>
+                    <select id="type-site" required>
+                        <option value="">-- Sélectionnez une formule --</option>
+                        <option value="gourmet">Vitrine Gourmet & Bistrot</option>
+                        <option value="freelance">Vitrine Freelance & Indépendant</option>
+                        <option value="niche">Vitrine Niche / Métier Spécifique</option>
+                    </select>
+                </div>
 
-        <div class="card">
-          <div class="card-img bg-gradient">
-            <span class="card-tag">Indépendant & Coach</span>
-          </div>
-          <div class="card-body">
-            <h3>Consultant & Freelance</h3>
-            <p>Site vitrine minimaliste avec intégration de module Calendly pour prise de rdv en direct.</p>
-            <button class="btn-demo" onclick="voirDemo('Consultant')">Consulter la démonstration &rarr;</button>
-          </div>
+                <!-- 2. COORDONNÉES -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Nom & Prénom *</label>
+                        <input type="text" id="nom" placeholder="Ex: Jean Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail *</label>
+                        <input type="email" id="email" placeholder="nom@exemple.fr" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telephone">Téléphone *</label>
+                        <input type="tel" id="telephone" placeholder="06 12 34 56 78" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entreprise">Nom de votre entreprise / activité *</label>
+                        <input type="text" id="entreprise" placeholder="Ex: Restaurant Le Bistrot" required>
+                    </div>
+                </div>
+
+                <!-- 3. DÉTAILS DU PROJET -->
+                <div class="form-group">
+                    <label for="description">2. Décrivez votre activité et vos attentes pour le site *</label>
+                    <textarea id="description" rows="4" placeholder="Présentez brièvement ce que vous faites, les couleurs souhaitées, l'ambiance..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="images-url">3. Lien vers vos images / logos (Google Drive, Dropbox, Wetransfer...)</label>
+                    <input type="url" id="images-url" placeholder="https://drive.google.com/...">
+                    <small>Vous pourrez aussi nous envoyer vos éléments par mail après la commande.</small>
+                </div>
+
+                <!-- PAIEMENT -->
+                <div class="form-submit">
+                    <button type="submit" class="btn-pay">Valider les informations et Payer</button>
+                </div>
+
+            </form>
         </div>
-      </div>
     </section>
 
-    <!-- SECTION TARIFS AVEC URGENCE -->
-    <section id="tarifs" class="container">
-      <h2 class="section-title">Offre <span class="text-gradient">Lancement Express</span></h2>
-      <p class="section-subtitle">Un tarif unique sans abonnement caché pour lancer votre commerce en ligne.</p>
-
-      <div class="pricing-wrapper">
-        <div class="price-card">
-          <div class="badge-populaire">Places Limitées</div>
-          <h3>Pack Vitrine Pro</h3>
-          
-          <div class="price-container">
-            <span class="price">200</span>
-            <span class="currency">€</span>
-          </div>
-          <p class="price-note">Paiement unique — 0 €/mois d'abonnement</p>
-          
-          <div class="countdown-box">
-            <div class="countdown-label">Fin de l'offre spéciale dans :</div>
-            <div id="timer" class="countdown-timer">04h 32m 15s</div>
-          </div>
-
-          <ul class="features">
-            <li><span class="check-icon">✓</span> Design modernisé Blanc, Bleu & Violet</li>
-            <li><span class="check-icon">✓</span> Adaptation mobile & tablette parfaite</li>
-            <li><span class="check-icon">✓</span> Formulaire de contact direct ou réservation</li>
-            <li><span class="check-icon">✓</span> Module Calendly inclus (sur demande)</li>
-            <li><span class="check-icon">✓</span> Propriété totale de votre code & domaine</li>
-          </ul>
-
-          <a href="https://buy.stripe.com/6oU6oJaod0COg13d1B73G00" target="_blank" class="btn-primary full-width">Valider & Payer par Stripe (200€)</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION AVIS CLIENTS -->
-    <section id="avis" class="container">
-      <h2 class="section-title">Avis <span class="text-gradient">Clients</span></h2>
-      <p class="section-subtitle">Évaluations vérifiées de nos prestations.</p>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>"Site vitrine livré en quelques jours pour mon bistro. Très propre, élégant et mes clients consultent la carte facilement sur leur téléphone."</p>
-          <div class="testimonial-author">Marc D.</div>
-          <div class="testimonial-role">Gérant — Le Bistro Gourmet</div>
-        </div>
-
-        <div class="testimonial-card">
-          <p>"L'intégration de la prise de rendez-vous Calendly a tout changé. Plus besoin de répondre au téléphone pendant les prestations."</p>
-          <div class="testimonial-author">Sophie L.</div>
-          <div class="testimonial-role">Coiffeuse Indépendante</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION FAQ -->
-    <section id="faq" class="container">
-      <h2 class="section-title">Foire Aux <span class="text-gradient">Questions</span></h2>
-      <p class="section-subtitle">Réponses aux interrogations fréquentes sur le processus de création.</p>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">Comment fonctionne le paiement de 200 € ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Le paiement s'effectue de manière sécurisée via Stripe. Une fois validé, vous remplissez le formulaire ci-dessous pour nous envoyer vos contenus et nous lançons le développement.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Puis-je intégrer un calendrier de réservation (Calendly) ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Oui, nous configurons le module Calendly sans frais supplémentaires sur votre site pour que vos clients puissent réserver des créneaux en direct.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Quel est le délai moyen de livraison ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Le délai moyen est de 3 à 7 jours ouvrés à compter de la réception de l'ensemble de vos éléments (textes, images, chartes graphiques).</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Suis-je propriétaire de la structure du site ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Oui. L'intégralité du code, des contenus et des droits d'utilisation vous est transférée dès la finalisation de la commande.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Le site est-il optimisé pour les terminaux mobiles ? <span class="faq-icon">+</span></button>
-          <div class="faq-answer">
-            <p>Toutes nos interfaces sont conçues selon les principes du Responsive Design pour garantir une lisibilité parfaite sur tout type d'écran.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION FORMULAIRE DE CONTACT -->
-    <section id="contact" class="container">
-      <div class="contact-box">
-        <h2 class="section-title">Transmettre votre <span class="text-gradient">Cahier des Charges</span></h2>
-        <p class="section-subtitle">Remplissez ce formulaire avant ou juste après votre règlement Stripe.</p>
-        
-        <!-- Remplace le lien Formspree ci-dessous par ton ID Formspree lié à kais_hamidona@icloud.com -->
-        <form id="contactForm" action="https://formspree.io/f/votre_form_id" method="POST">
-          <div class="form-group">
-            <input type="text" name="nom" id="nom" placeholder="Nom et prénom ou entreprise" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" id="email" placeholder="Adresse e-mail professionnelle" required>
-          </div>
-          <div class="form-group">
-            <textarea name="message" id="message" rows="5" placeholder="Description de vos objectifs web (couleurs, souhait d'intégrer Calendly, etc.)..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary full-width">Envoyer les informations</button>
-        </form>
-        <div id="formFeedback" class="feedback-msg"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Setting Web. Tous droits réservés.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
