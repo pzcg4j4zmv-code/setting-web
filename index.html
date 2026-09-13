@@ -48,7 +48,7 @@
           <div class="card-body">
             <h3>Le Bistro Gourmet</h3>
             <p>Présentation du menu, horaires d'ouverture et intégration d'un module de réservation rapide.</p>
-            <button class="btn-demo" onclick="voirDemo('Le Bistro Gourmet')">Voir le modèle &rarr;</button>
+            <button class="btn-demo" onclick="voirDemo('Le Bistro Gourmet')">Consulter la démonstration &rarr;</button>
           </div>
         </div>
 
@@ -59,18 +59,18 @@
           <div class="card-body">
             <h3>Salon de Coiffure & Beauté</h3>
             <p>Mise en avant des prestations, tarifs et système d'agenda en ligne automatisé.</p>
-            <button class="btn-demo" onclick="voirDemo('Salon de Coiffure')">Voir le modèle &rarr;</button>
+            <button class="btn-demo" onclick="voirDemo('Salon de Coiffure')">Consulter la démonstration &rarr;</button>
           </div>
         </div>
 
         <div class="card">
           <div class="card-img bg-gradient">
-            <span class="card-tag">Indépendant</span>
+            <span class="card-tag">Indépendant & Coach</span>
           </div>
           <div class="card-body">
-            <h3>Consultant & Coach</h3>
+            <h3>Consultant & Freelance</h3>
             <p>Site vitrine minimaliste avec intégration de module Calendly pour prise de rdv en direct.</p>
-            <button class="btn-demo" onclick="voirDemo('Consultant')">Voir le modèle &rarr;</button>
+            <button class="btn-demo" onclick="voirDemo('Consultant')">Consulter la démonstration &rarr;</button>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@
     <!-- SECTION AVIS CLIENTS -->
     <section id="avis" class="container">
       <h2 class="section-title">Avis <span class="text-gradient">Clients</span></h2>
-      <p class="section-subtitle">Ce que pensent les commerçants ayant adopté nos solutions.</p>
+      <p class="section-subtitle">Évaluations vérifiées de nos prestations.</p>
 
       <div class="testimonials-grid">
         <div class="testimonial-card">
@@ -133,6 +133,8 @@
     <!-- SECTION FAQ -->
     <section id="faq" class="container">
       <h2 class="section-title">Foire Aux <span class="text-gradient">Questions</span></h2>
+      <p class="section-subtitle">Réponses aux interrogations fréquentes sur le processus de création.</p>
+
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question">Comment fonctionne le paiement de 200 € ? <span class="faq-icon">+</span></button>
@@ -140,33 +142,55 @@
             <p>Le paiement s'effectue de manière sécurisée via Stripe. Une fois validé, vous remplissez le formulaire ci-dessous pour nous envoyer vos contenus et nous lançons le développement.</p>
           </div>
         </div>
+
         <div class="faq-item">
           <button class="faq-question">Puis-je intégrer un calendrier de réservation (Calendly) ? <span class="faq-icon">+</span></button>
           <div class="faq-answer">
             <p>Oui, nous configurons le module Calendly sans frais supplémentaires sur votre site pour que vos clients puissent réserver des créneaux en direct.</p>
           </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Quel est le délai moyen de livraison ? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Le délai moyen est de 3 à 7 jours ouvrés à compter de la réception de l'ensemble de vos éléments (textes, images, chartes graphiques).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Suis-je propriétaire de la structure du site ? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Oui. L'intégralité du code, des contenus et des droits d'utilisation vous est transférée dès la finalisation de la commande.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Le site est-il optimisé pour les terminaux mobiles ? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Toutes nos interfaces sont conçues selon les principes du Responsive Design pour garantir une lisibilité parfaite sur tout type d'écran.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION FORMULAIRE / CAHIER DES CHARGES -->
+    <!-- SECTION FORMULAIRE DE CONTACT -->
     <section id="contact" class="container">
       <div class="contact-box">
-        <h2 class="section-title">Envoyez vos <span class="text-gradient">Informations</span></h2>
+        <h2 class="section-title">Transmettre votre <span class="text-gradient">Cahier des Charges</span></h2>
         <p class="section-subtitle">Remplissez ce formulaire avant ou juste après votre règlement Stripe.</p>
         
-        <!-- Remplace le lien Formspree ci-dessous avec ton propre ID Formspree lié à kais_hamidona@icloud.com -->
+        <!-- Remplace le lien Formspree ci-dessous par ton ID Formspree lié à kais_hamidona@icloud.com -->
         <form id="contactForm" action="https://formspree.io/f/votre_form_id" method="POST">
           <div class="form-group">
-            <input type="text" name="nom" id="nom" placeholder="Nom complet ou Nom du commerce" required>
+            <input type="text" name="nom" id="nom" placeholder="Nom et prénom ou entreprise" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" id="email" placeholder="Adresse e-mail de contact" required>
+            <input type="email" name="email" id="email" placeholder="Adresse e-mail professionnelle" required>
           </div>
           <div class="form-group">
-            <textarea name="message" id="message" rows="5" placeholder="Présentez votre activité, vos souhaits de couleurs et si vous désirez Calendly..." required></textarea>
+            <textarea name="message" id="message" rows="5" placeholder="Description de vos objectifs web (couleurs, souhait d'intégrer Calendly, etc.)..." required></textarea>
           </div>
-          <button type="submit" class="btn-primary full-width">Envoyer mes éléments</button>
+          <button type="submit" class="btn-primary full-width">Envoyer les informations</button>
         </form>
         <div id="formFeedback" class="feedback-msg"></div>
       </div>
