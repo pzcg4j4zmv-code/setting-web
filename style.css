@@ -498,3 +498,35 @@ footer {
   font-size: 0.85rem;
   background: #ffffff;
 }
+/* ==========================================
+   SYSTEM REBOOT - FREEDOM OVERRIDE
+   ========================================== */
+
+:root {
+  --neon-green: #00ff66;
+  --dark-screen: #0a0e14;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-screen);
+  color: var(--neon-green);
+  font-family: 'Fira Code', monospace;
+  
+  /* Effet d'inclinaison dynamique du terminal */
+  transform: perspective(1000px) rotateX(2deg) rotateY(-1deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Le curseur personnalisé qui clignote */
+.cursor-blink::after {
+  content: '▋';
+  color: var(--neon-green);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
