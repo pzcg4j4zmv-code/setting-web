@@ -1,6 +1,6 @@
-// Consultation des démonstrations
+// Consultation des maquettes
 function voirDemo(nomProjet) {
-  alert(`Setting Web : Démonstration de l'interface [${nomProjet}].`);
+  alert(`Ouverture de la structure optimisée pour le secteur : ${nomProjet}.`);
 }
 
 // Module Accordéon FAQ
@@ -18,39 +18,24 @@ document.querySelectorAll('.faq-question').forEach(button => {
   });
 });
 
-// Compte à rebours dynamique (Effet d'urgence)
-function startTimer(durationInSeconds) {
-  let timer = durationInSeconds;
-  const timerElement = document.getElementById('timer');
-
-  setInterval(() => {
-    const hours = Math.floor(timer / 3600);
-    const minutes = Math.floor((timer % 3600) / 60);
-    const seconds = timer % 60;
-
-    if (timerElement) {
-      timerElement.textContent = 
-        `${hours.toString().padStart(2, '0')}h ${minutes.toString().padStart(2, '0')}m ${seconds.toString().padStart(2, '0')}s`;
-    }
-
-    if (--timer < 0) {
-      timer = durationInSeconds; // Recommence le compte à rebours
-    }
-  }, 1000);
-}
-
-startTimer(16335); // 4 heures, 32 min, 15 sec
-
-// Traitement du Formulaire de Contact (Formspree)
+// Traitement du Formulaire et Redirection Stripe
 const form = document.getElementById('contactForm');
 const feedback = document.getElementById('formFeedback');
+
+// Ton vrai lien Stripe
+const STRIPE_PAYMENT_URL = "https://buy.stripe.com/6oU6oJaod0COg13d1B73G00"; 
 
 form.addEventListener('submit', async function(e) {
   e.preventDefault();
   
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.innerText = "Validation en cours...";
+  submitBtn.disabled = true;
+
   const data = new FormData(form);
   
   try {
+    // Si tu utilises Formspree, l'envoi se fait ici
     const response = await fetch(form.action, {
       method: form.method,
       body: data,
@@ -58,15 +43,23 @@ form.addEventListener('submit', async function(e) {
     });
     
     if (response.ok) {
-      feedback.style.color = '#0052cc';
-      feedback.innerText = "Merci ! Vos éléments ont bien été transmis à Setting Web. Nous revenons vers vous sous 24h.";
-      form.reset();
+      feedback.style.color = '#0044ff';
+      feedback.innerText = "Cahier des charges validé. Redirection vers le paiement...";
+      
+      setTimeout(() => {
+        window.location.href = STRIPE_PAYMENT_URL;
+      }, 1500);
+
     } else {
       feedback.style.color = '#d32f2f';
-      feedback.innerText = "Une erreur technique s'est produite lors de l'envoi.";
+      feedback.innerText = "Erreur de connexion. Vérifiez votre lien Formspree.";
+      submitBtn.innerText = "Valider et procéder au paiement — 200 €";
+      submitBtn.disabled = false;
     }
   } catch (error) {
     feedback.style.color = '#d32f2f';
-    feedback.innerText = "Connexion au serveur impossible.";
+    feedback.innerText = "Connexion impossible.";
+    submitBtn.innerText = "Valider et procéder au paiement — 200 €";
+    submitBtn.disabled = false;
   }
 });
