@@ -3,179 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Setting Web | Agence Web Moderne & Sur-Mesure</title>
-  
-  <!-- Font Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
+  <title>Setting Web — Création de Sites Vitrines pour Commerces & Restaurants</title>
+  <meta name="description" content="Création de sites vitrines sur-mesure pour commerçants, restaurants et professionnels indépendants. Aucune souscription mensuelle.">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- Curseur personnalisé immersif -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <!-- Curseur Personnalisé -->
+  <div class="custom-cursor"></div>
 
-  <!-- NAVIGATION -->
-  <header>
-    <div class="logo">Setting<span>Web</span></div>
-    <nav class="nav-links">
-      <a href="#resultats">Réalisations</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="nav-btn">Contact</a>
+  <!-- En-tête / Navigation -->
+  <header class="navbar">
+    <div class="logo">SETTING WEB</div>
+    <nav>
+      <a href="#services">Prestations</a>
+      <a href="#reservation">Prise de RDV</a>
+      <a href="#tarifs" class="nav-btn">Offre Spéciale</a>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="badge-hero float-anim">⚡ Site Web Sur-Mesure dès 100€</div>
-    <h1 class="reveal-text">Des sites web <span class="text-gradient">captivants</span> & sur-mesure pour votre entreprise.</h1>
-    <p class="reveal-text">Nous créons des expériences en ligne modernes, fluides et conçues pour convertir vos visiteurs en clients fidèles.</p>
-    <div class="hero-actions reveal-text">
-      <a href="#contact" class="btn-primary magnetic-btn">Obtenir mon site</a>
-      <a href="#resultats" class="btn-secondary magnetic-btn">Voir nos projets</a>
-    </div>
-  </section>
-
-  <!-- RÉSULTATS / PROJETS -->
-  <section id="resultats" class="container">
-    <h2 class="section-title reveal-text">Nos Dernières Créations</h2>
-    <p class="section-subtitle reveal-text">Des designs épurés adaptés à chaque secteur d'activité.</p>
-
-    <div class="grid-resultats">
-      <!-- Carte 1 -->
-      <div class="card tilt-card">
-        <div class="card-img bg-blue">
-          <span class="card-tag">Restauration</span>
-        </div>
-        <div class="card-body">
-          <h3>Bistro & Gastronomie</h3>
-          <p>Site vitrine interactif avec menu en ligne et réservation directe.</p>
-          <button class="btn-demo">Découvrir le projet →</button>
-        </div>
-      </div>
-
-      <!-- Carte 2 -->
-      <div class="card tilt-card">
-        <div class="card-img bg-purple">
-          <span class="card-tag">Artisanat</span>
-        </div>
-        <div class="card-body">
-          <h3>Ebenisterie d'Art</h3>
-          <p>Mise en valeur des créations avec galerie haute définition et demandes de devis.</p>
-          <button class="btn-demo">Découvrir le projet →</button>
-        </div>
-      </div>
-
-      <!-- Carte 3 -->
-      <div class="card tilt-card">
-        <div class="card-img bg-gradient">
-          <span class="card-tag">Services</span>
-        </div>
-        <div class="card-body">
-          <h3>Cabinet de Conseil</h3>
-          <p>Présentation professionnelle avec prise de rendez-vous intégrée.</p>
-          <button class="btn-demo">Découvrir le projet →</button>
-        </div>
+  <!-- Section Héro -->
+  <section class="hero container">
+    <div class="hero-content">
+      <span class="tagline">Agence Web Indépendante</span>
+      <h1 class="hero-title reveal-text">Un site web haut de gamme pour votre établissement. Sans abonnement.</h1>
+      <p class="hero-description reveal-text">
+        Nous concevons des sites vitrines immersifs et ultra-rapides pour commerçants, restaurateurs et artisans. Mettez en valeur votre savoir-faire et vos menus sans frais mensuels récurrents.
+      </p>
+      <div class="hero-actions">
+        <a href="#tarifs" class="btn-primary magnetic-btn">Découvrir l'offre</a>
+        <a href="#services" class="btn-secondary">En savoir plus</a>
       </div>
     </div>
   </section>
 
-  <!-- TARIFS -->
+  <!-- Section Prestations -->
+  <section id="services" class="container">
+    <h2 class="section-title reveal-text">Conçu pour les commerces locaux</h2>
+    <p class="section-subtitle reveal-text">Une infrastructure moderne adaptée aux besoins réels de votre activité.</p>
+
+    <div class="services-grid">
+      <div class="service-card tilt-card">
+        <h3>Design Sur-Mesure</h3>
+        <p>Présentation élégante de vos produits, plats, menus ou prestations. Interface optimisée pour téléphones et ordinateurs.</p>
+      </div>
+      <div class="service-card tilt-card">
+        <h3>Prise de RDV & Réservation</h3>
+        <p>Intégration d'un système interactif (Calendly ou formulaire dédié) pour permettre à vos clients de réserver en direct.</p>
+      </div>
+      <div class="service-card tilt-card">
+        <h3>0€ de Frais Mensuels</h3>
+        <p>Contrairement aux agences traditionnelles, vous ne payez aucun abonnement d'hébergement. Le site vous appartient à 100%.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Présentation Prise de RDV (Exemple Calendly) -->
+  <section id="reservation" class="container">
+    <h2 class="section-title reveal-text">Système de Réservation Intégré</h2>
+    <p class="section-subtitle reveal-text">Simplifiez la prise de contact et la gestion de vos rendez-vous clients.</p>
+    
+    <div class="calendly-demo-box tilt-card">
+      <h3>Automatisation pour votre commerce</h3>
+      <p>Nous pouvons intégrer un module de réservation en ligne (type Calendly) directement sur votre site. Vos clients choisissent un créneau libre, et la confirmation s'ajoute automatiquement à votre agenda personnel.</p>
+    </div>
+  </section>
+
+  <!-- Section Tarifs & Urgence -->
   <section id="tarifs" class="container">
-    <h2 class="section-title reveal-text">Un Tarif Transparent</h2>
-    <p class="section-subtitle reveal-text">Pas de frais cachés, un accompagnement complet.</p>
+    <h2 class="section-title reveal-text">Offre de Lancement Exclusivité</h2>
+    <p class="section-subtitle reveal-text">Tarif préférentiel réservé aux 2 prochains projets accompagnés.</p>
 
     <div class="pricing-wrapper">
-      <div class="price-card tilt-card">
-        <div class="badge-populaire">Offre Essentielle</div>
+      <div class="price-card tilt-card promo-card">
+        <div class="badge-limite">Disponible : 2 places restantes</div>
+        
         <div class="price-container">
-          <span class="price">100</span>
+          <span class="old-price">600€</span>
+          <span class="price">200</span>
           <span class="currency">€</span>
         </div>
-        <p class="price-note">Paiement unique, aucun abonnement requis</p>
+
+        <div class="countdown-box">
+          <p class="countdown-label">Fin de la session de lancement dans :</p>
+          <div id="countdown" class="countdown-timer">07j 00h 00m 00s</div>
+        </div>
+
+        <p class="price-note">Paiement unique sécurisé. Aucun coût d'abonnement récurrent.</p>
         
         <ul class="features">
-          <li><span class="check-icon">✓</span> Design sur-mesure & 100% responsive</li>
-          <li><span class="check-icon">✓</span> Optimisation de la vitesse de chargement</li>
-          <li><span class="check-icon">✓</span> Formulaire de contact fonctionnel</li>
-          <li><span class="check-icon">✓</span> Hébergement rapide & sécurisé inclus</li>
+          <li><span class="check-icon">—</span> Conception complète du site vitrine</li>
+          <li><span class="check-icon">—</span> Intégration de la carte, des tarifs ou des prestations</li>
+          <li><span class="check-icon">—</span> Intégration du calendrier de réservation (Calendly)</li>
+          <li><span class="check-icon">—</span> Formulaire de contact et bouton d'appel direct</li>
+          <li><span class="check-icon">—</span> Optimisation mobile et référencement Google de base</li>
+          <li><span class="check-icon">—</span> Accès immédiat au formulaire de personnalisation post-achat</li>
         </ul>
 
-        <a href="#contact" class="btn-primary full-width magnetic-btn">Commander mon site</a>
+        <!-- Remplace l'URL ci-dessous par ton lien Stripe exact -->
+        <a href="https://buy.stripe.com/TON_LIEN_STRIPE" target="_blank" class="btn-primary full-width magnetic-btn">Réserver mon site à 200€</a>
       </div>
     </div>
   </section>
 
-  <!-- TRUSTPILOT PLACEHOLDER -->
-  <section class="container">
-    <div class="trustpilot-placeholder tilt-card">
-      <div class="trustpilot-logo">★ Trustpilot</div>
-      <p class="trustpilot-text">"Une note moyenne de 4.9/5 basée sur la satisfaction de nos premiers clients."</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="container">
-    <h2 class="section-title reveal-text">Foire Aux Questions</h2>
-    <p class="section-subtitle reveal-text">Tout ce que vous devez savoir avant de vous lancer.</p>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">Combien de temps prend la création du site ? <span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Une fois les textes et images transmis, votre site est livré et mis en ligne en 3 à 5 jours ouvrés.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Suis-je propriétaire de mon site web ? <span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Absolument ! Le code vous appartient entièrement et il n'y a aucun abonnement mensuel obligatoire.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Le site sera-t-il bien adapté sur smartphone ? <span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Oui, toutes nos créations sont pensées « Mobile First » pour garantir une fluidité parfaite sur téléphones et tablettes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="container">
-    <div class="contact-box tilt-card">
-      <h2 class="section-title">Discutons de Votre Projet</h2>
-      <p class="section-subtitle">Remplissez le formulaire ci-dessous, nous répondons sous 24h.</p>
-
-      <form id="contact-form" action="https://formspree.io/f/xbldbeoo" method="POST">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Votre Nom / Entreprise" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Votre Adresse E-mail" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
-        </div>
-        <button type="submit" class="btn-primary full-width magnetic-btn">Envoyer mon message</button>
-        <p class="feedback-msg" id="form-status"></p>
-      </form>
-    </div>
-  </section>
-
+  <!-- Pied de page -->
   <footer>
-    <p>© 2026 Setting Web. Tous droits réservés.</p>
+    <div class="container footer-content">
+      <p>&copy; Setting Web. Tous droits réservés. Conception de sites vitrines professionnels.</p>
+    </div>
   </footer>
 
-  <!-- Scripts d'animation GSAP + JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
